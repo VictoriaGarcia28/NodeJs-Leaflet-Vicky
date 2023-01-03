@@ -18,14 +18,14 @@ map.locate({enableHighAccuracy: true})
 map.on('locationfound', e => {
   const coords = [e.latlng.lat, e.latlng.lng];
   const marker = L.marker(coords);
-  marker.bindPopup('HolaHola!');
+  marker.bindPopup('HolaHola!'); ///Mensaje del marcador del mapa
   map.addLayer(marker);
   socket.emit('userCoordinates', e.latlng);
 });
 
 //Nuevo usuario conectado
 socket.on("newUserCoordinates", (coords) => {
-console.log("Nuevo usuario conectado")
+console.log("Nuevo usuario conectado")  ///Mensaje en la consola
 const marker = L.marker([coords.lat, coords.lng]);
 marker.bindPopup('HolaHola');
 map.addLayer(marker);
