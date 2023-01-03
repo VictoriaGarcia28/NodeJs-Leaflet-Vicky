@@ -23,6 +23,7 @@ map.on('locationfound', e => {
   socket.emit('userCoordinates', e.latlng);
 });
 
+//Nuevo usuario conectado
 socket.on("newUserCoordinates", (coords) => {
 console.log("Nuevo usuario conectado")
 const marker = L.marker([coords.lat, coords.lng]);
