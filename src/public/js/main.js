@@ -26,7 +26,7 @@ map.on('locationfound', e => {
 socket.on("newUserCoordinates", (coords) => {
 console.log("Nuevo usuario conectado")
 const marker = L.marker([coords.lat, coords.lng]);
-marker.bindPopup('Hello there');
+marker.bindPopup('HolaHola');
 map.addLayer(marker);
 });
 
