@@ -18,7 +18,7 @@ map.locate({enableHighAccuracy: true})
 map.on('locationfound', e => {
   const coords = [e.latlng.lat, e.latlng.lng];
   const marker = L.marker(coords);
-  marker.bindPopup('You are here!');
+  marker.bindPopup('HOLA!');
   map.addLayer(marker);
   socket.emit('userCoordinates', e.latlng);
 });
